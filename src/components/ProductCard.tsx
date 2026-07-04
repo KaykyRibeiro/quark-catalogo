@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import { getProductImageUrl } from "../utils/imageHelper";
 
 export interface ProductData {
   id: string;
@@ -8,7 +9,7 @@ export interface ProductData {
   category: string;
   price?: number;
   images: string[];
-  colors: { name: string; hex: string }[];
+  colors: { name: string; hex: string; image?: string }[];
   dimensions: string;
   material: string;
   notes: string;
@@ -33,7 +34,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails
       {/* Product Image Area */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-50">
         <img
-          src={product.images[0]}
+          src={getProductImageUrl(product.images[0])}
           alt={product.name}
           className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
           loading="lazy"

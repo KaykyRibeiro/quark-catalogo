@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../components/Breadcrumbs";
 import { ProductCard } from "../components/ProductCard";
 import type { ProductData } from "../components/ProductCard";
 import { generateWhatsAppLink } from "../utils/whatsapp";
+import { getProductImageUrl } from "../utils/imageHelper";
 import { 
   Ruler, 
   Layers, 
@@ -35,12 +36,26 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
 
-  // Reset indices when product changes
+  // Reset indices when product changes, aligning with default color's image
   useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    if (product) {
+      // Find the image for the first color (index 0) if available
+      const defaultColor = product.colors[0];
+      if (defaultColor && defaultColor.image) {
+        const imgIndex = product.images.indexOf(defaultColor.image);
+        if (imgIndex !== -1) {
+          setSelectedImageIndex(imgIndex);
+          setSelectedColorIndex(0);
+          return;
+        }
+      }
+    }
+    
     setSelectedImageIndex(0);
     setSelectedColorIndex(0);
-    window.scrollTo(0, 0);
-  }, [productId]);
+  }, [productId, product]);
 
   if (!product) {
     return (
@@ -75,13 +90,47 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     .filter((p, index, self) => self.findIndex((t) => t.id === p.id) === index && p.id !== product.id)
     .slice(0, 4);
 
-  // Image Navigation
+  // Image Navigation with color auto-detection
   const nextImage = () => {
-    setSelectedImageIndex((prev) => (prev + 1) % product.images.length);
+    const nextIdx = (selectedImageIndex + 1) % product.images.length;
+    setSelectedImageIndex(nextIdx);
+    
+    const imgPath = product.images[nextIdx];
+    const colorIdx = product.colors.findIndex((c) => c.image === imgPath);
+    if (colorIdx !== -1) {
+      setSelectedColorIndex(colorIdx);
+    }
   };
 
   const prevImage = () => {
-    setSelectedImageIndex((prev) => (prev - 1 + product.images.length) % product.images.length);
+    const prevIdx = (selectedImageIndex - 1 + product.images.length) % product.images.length;
+    setSelectedImageIndex(prevIdx);
+    
+    const imgPath = product.images[prevIdx];
+    const colorIdx = product.colors.findIndex((c) => c.image === imgPath);
+    if (colorIdx !== -1) {
+      setSelectedColorIndex(colorIdx);
+    }
+  };
+
+  const handleColorSelect = (index: number) => {
+    setSelectedColorIndex(index);
+    const color = product.colors[index];
+    if (color && color.image) {
+      const imgIndex = product.images.indexOf(color.image);
+      if (imgIndex !== -1) {
+        setSelectedImageIndex(imgIndex);
+      }
+    }
+  };
+
+  const handleThumbnailClick = (index: number) => {
+    setSelectedImageIndex(index);
+    const imgPath = product.images[index];
+    const colorIdx = product.colors.findIndex((c) => c.image === imgPath);
+    if (colorIdx !== -1) {
+      setSelectedColorIndex(colorIdx);
+    }
   };
 
   return (
@@ -114,7 +163,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             {/* Main Image Screen */}
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-zinc-100 bg-zinc-50 shadow-sm">
               <img
-                src={product.images[selectedImageIndex]}
+                src={getProductImageUrl(product.images[selectedImageIndex])}
                 alt={`${product.name} - Imagem ${selectedImageIndex + 1}`}
                 className="h-full w-full object-cover object-center transition-opacity duration-300"
               />
@@ -144,7 +193,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 {product.images.map((img, index) => (
                   <button
                     key={index}
-                    onClick={() => setSelectedImageIndex(index)}
+                    onClick={() => handleThumbnailClick(index)}
                     className={`relative aspect-[4/3] w-24 flex-shrink-0 overflow-hidden rounded-xl border transition-all ${
                       selectedImageIndex === index
                         ? "border-black ring-2 ring-zinc-950/10 scale-95"
@@ -152,7 +201,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                     }`}
                   >
                     <img
-                      src={img}
+                      src={getProductImageUrl(img)}
                       alt={`Miniatura ${index + 1}`}
                       className="h-full w-full object-cover object-center"
                     />
@@ -208,7 +257,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 {product.colors.map((color, index) => (
                   <button
                     key={color.name}
-                    onClick={() => setSelectedColorIndex(index)}
+                    onClick={() => handleColorSelect(index)}
                     title={color.name}
                     className={`relative flex h-10 w-10 items-center justify-center rounded-full border shadow-sm transition-all focus:outline-none ${
                       selectedColorIndex === index

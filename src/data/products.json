@@ -1,163 +1,20 @@
 [
   {
-    "id": "vaso-espiral-geometrico",
-    "name": "Vaso Espiral Geométrico",
-    "description": "Um vaso decorativo com design gerado por algoritmos e linhas espiraladas marcantes. Seu acabamento texturizado e formato moderno criam um jogo sutil de luz e sombra, tornando-o uma peça de destaque em qualquer ambiente contemporâneo. Ideal para arranjos de flores secas ou simplesmente como escultura autônoma.",
-    "category": "Decoração",
-    "price": 149.00,
+    "id": "suporte-escova-pasta-dentes",
+    "name": "Suporte para Escova de Dentes e Pasta de Dente",
+    "description": "Um suporte para escova de dentes e pasta de dente com design moderno e linhas minimalistas. Seu acabamento texturizado e formato ergonômico criam um jogo sutil de luz e sombra, tornando-o uma peça de destaque em qualquer ambiente contemporâneo. Ideal para escovas de dentes e pastas de dente ou simplesmente como escultura autônoma.",
+    "category": "Banheiro",
+    "price": 20.00,
     "images": [
-      "https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1606744824163-985d376605aa?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=800&auto=format&fit=crop&q=80"
+      "src/assets/products/suporte-escova-pasta-dentes/suporte-branco.webp",
+      "src/assets/products/suporte-escova-pasta-dentes/suporte-preto.webp"
     ],
     "colors": [
-      { "name": "Branco Mármore", "hex": "#EAE6DF" },
-      { "name": "Preto Matte", "hex": "#1A1A1A" },
-      { "name": "Terracota Eco", "hex": "#C87D65" },
-      { "name": "Cobre Metalizado", "hex": "#B87333" }
+      { "name": "Branco", "hex": "#EAE6DF", "image": "src/assets/products/suporte-escova-pasta-dentes/suporte-branco.webp" },
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/suporte-escova-pasta-dentes/suporte-preto.webp" }
     ],
     "dimensions": "14 x 14 x 24 cm",
-    "material": "PLA Premium Biodegradável (Origem Vegetal)",
-    "notes": "Não recomendado para conter água diretamente por longos períodos (para flores naturais, utilize um recipiente interno protetor). Limpar apenas com pano seco ou levemente úmido."
-  },
-  {
-    "id": "suporte-gamer-cyborg",
-    "name": "Suporte Gamer Cyborg para Headset",
-    "description": "Organize seu setup com estilo e sofisticação futurista. Este suporte para headset possui linhas angulares inspiradas na estética cyberpunk e mecânica pesada. Além de proteger a tiara do seu headset contra deformações, possui canaletas traseiras para guiar o cabo do fone de ouvido de maneira limpa.",
-    "category": "Suportes",
-    "price": 189.00,
-    "images": [
-      "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format&fit=crop&q=80"
-    ],
-    "colors": [
-      { "name": "Preto Carbono", "hex": "#121212" },
-      { "name": "Cinza Titânio", "hex": "#5A5D64" },
-      { "name": "Vermelho Neon", "hex": "#FF3B30" },
-      { "name": "Azul Cyber", "hex": "#007AFF" }
-    ],
-    "dimensions": "12 x 15 x 26 cm",
-    "material": "PETG Rígido Ultra-Resistente",
-    "notes": "Base equipada com pés emborrachados antiderrapantes. Suporta headsets de até 600g de forma estável."
-  },
-  {
-    "id": "organizador-desk-orbit",
-    "name": "Organizador Desk Orbit",
-    "description": "Um organizador de mesa elegante e compacto, desenhado para manter suas canetas, cartões de visita, clipes e pequenos gadgets no lugar certo. Composto por curvas suaves e divisórias internas sob medida, ele ajuda a manter o foco eliminando o caos visual do seu espaço de trabalho ou home office.",
-    "category": "Escritório",
-    "price": 89.00,
-    "images": [
-      "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?w=800&auto=format&fit=crop&q=80"
-    ],
-    "colors": [
-      { "name": "Cinza Mineral", "hex": "#8E8E93" },
-      { "name": "Branco Puro", "hex": "#FFFFFF" },
-      { "name": "Verde Oliva", "hex": "#5D6B59" },
-      { "name": "Azul Profundo", "hex": "#1C3D5A" }
-    ],
-    "dimensions": "20 x 10 x 8 cm",
-    "material": "PLA Premium de Alta Densidade",
-    "notes": "Possui compartimento magnético embutido na base para coletar clipes de metal."
-  },
-  {
-    "id": "mascara-oni-cyberpunk",
-    "name": "Máscara Oni Cyberpunk Decorativa",
-    "description": "Uma peça artística impressionante que funde o folclore tradicional japonês com o estilo futurista moderno. Rica em detalhes minuciosos e texturas precisas obtidas através de impressão 3D de alta resolução. Perfeita para pendurar na parede, expor em prateleiras geek ou utilizar como item de cosplay de alto nível.",
-    "category": "Geek",
-    "price": 279.00,
-    "images": [
-      "https://images.unsplash.com/photo-1566577134770-3d85bb3a9cc4?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=800&auto=format&fit=crop&q=80"
-    ],
-    "colors": [
-      { "name": "Vermelho Crimson", "hex": "#9E1B1B" },
-      { "name": "Preto Obsidiana", "hex": "#0D0D0C" },
-      { "name": "Ouro Antigo", "hex": "#CFB53B" },
-      { "name": "Branco Osso", "hex": "#F0EAD6" }
-    ],
-    "dimensions": "18 x 14 x 22 cm",
-    "material": "ABS Rígido com Acabamento Premium",
-    "notes": "Inclui suporte traseiro oculto para fixação em paredes. Não acompanha tiras para uso no rosto (cosplay), que podem ser adaptadas nas aberturas laterais."
-  },
-  {
-    "id": "luminaria-modular-helix",
-    "name": "Luminária Modular Eco-Helix",
-    "description": "Esta luminária traz um padrão de treliça geométrica complexa gerada por computador, que projeta sombras fascinantes nas paredes ao redor. Perfeita para iluminação de cabeceira ou para criar um clima relaxante na sala de estar. O corpo translúcido permite uma difusão de luz suave e agradável.",
-    "category": "Casa",
-    "price": 219.00,
-    "images": [
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1565814636199-ae8133055c1c?w=800&auto=format&fit=crop&q=80"
-    ],
-    "colors": [
-      { "name": "Natural Translúcido", "hex": "#F7F5F0" },
-      { "name": "Laranja Âmbar", "hex": "#FF9500" },
-      { "name": "Branco Leitoso", "hex": "#FCFDFE" }
-    ],
-    "dimensions": "15 x 15 x 28 cm",
-    "material": "PETG Translúcido Resistente ao Calor",
-    "notes": "Utilizar EXCLUSIVAMENTE lâmpadas LED frias (máximo 9W) para evitar o aquecimento e deformação do plástico. Lâmpada e cabo elétrico com interruptor inclusos."
-  },
-  {
-    "id": "suporte-tri-angulo-tablet",
-    "name": "Suporte Tri-Ângulo para Tablet e Celular",
-    "description": "Suporte dobrável multifuncional com três regulagens de inclinação ergonômica. Desenhado para acomodar smartphones ou tablets de até 12.9 polegadas nas posições vertical e horizontal. Ideal para chamadas de vídeo, leitura de receitas na cozinha, ou como monitor secundário no trabalho.",
-    "category": "Suportes",
-    "price": 59.00,
-    "images": [
-      "https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1522273400909-fd1a8f77637e?w=800&auto=format&fit=crop&q=80"
-    ],
-    "colors": [
-      { "name": "Preto Fosco", "hex": "#1F1F1F" },
-      { "name": "Cinza Espacial", "hex": "#4A4D50" },
-      { "name": "Branco Ártico", "hex": "#F9F9FB" },
-      { "name": "Azul Oceano", "hex": "#005A9C" }
-    ],
-    "dimensions": "10 x 12 x 3 cm (Fechado)",
-    "material": "ABS Reforçado com Fibras",
-    "notes": "Dobradiças de alta fricção ajustadas mecanicamente para evitar folgas com o tempo de uso."
-  },
-  {
-    "id": "organizador-gavetas-colmeia",
-    "name": "Organizador de Gavetas Colmeia (Kit com 6)",
-    "description": "Módulos hexagonais intertravantes para organizar gavetas de roupas, talheres ou ferramentas. Com sistema de encaixe rápido nas laterais, você pode montar o layout que melhor se adapta às dimensões da sua gaveta, otimizando o espaço e agilizando a localização das suas peças.",
-    "category": "Organização",
-    "price": 99.00,
-    "images": [
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80"
-    ],
-    "colors": [
-      { "name": "Cinza Claro", "hex": "#C7C7CC" },
-      { "name": "Preto Fosco", "hex": "#222222" },
-      { "name": "Branco Clean", "hex": "#FAFAFA" }
-    ],
-    "dimensions": "8 x 8 x 6 cm (Cada Módulo)",
-    "material": "PLA Premium Resistente",
-    "notes": "O kit contém 6 módulos intertravantes. Se necessário, compre kits adicionais para cobrir gavetas maiores."
-  },
-  {
-    "id": "grampo-sargento-ferramenta",
-    "name": "Grampo Sargento de Fixação Rápida",
-    "description": "Uma ferramenta funcional impressa em 3D para marcenaria hobista, colagens e modelismo. Possui rosca trapezoidal de passo rápido que gera grande pressão de aperto mecânico sem deformar o corpo do grampo. As mandíbulas móveis se adaptam a superfícies angulares.",
-    "category": "Ferramentas",
-    "price": 75.00,
-    "images": [
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80"
-    ],
-    "colors": [
-      { "name": "Preto e Amarelo Industrial", "hex": "#FAD02C" },
-      { "name": "Laranja Trânsito", "hex": "#FF4500" },
-      { "name": "Preto Carbono", "hex": "#1A1A1A" }
-    ],
-    "dimensions": "15 x 8 x 3 cm",
-    "material": "PETG Rígido de Alta Tenacidade (Infraestrutura Interna 60%)",
-    "notes": "Apropriado para fixações domésticas e colagens rápidas. Não expor a torções industriais extremas acima de 50 kgf."
+    "material": "PETG Rígido de Alta Tenacidade",
+    "notes": "Produto não hermético. Não recomendado para conter líquidos diretamente."
   }
 ]

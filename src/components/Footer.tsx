@@ -1,5 +1,5 @@
 import React from "react";
-import { Cpu, Mail, ArrowUp } from "lucide-react";
+import { Mail, ArrowUp } from "lucide-react";
 import { WHATSAPP_NUMBER } from "../utils/whatsapp";
 
 interface FooterProps {
@@ -44,10 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveCategory, navigateToCat
           {/* Company Bio */}
           <div className="space-y-4 md:col-span-1">
             <div className="flex items-center gap-2 text-white">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-black">
-                <Cpu className="h-4 w-4" />
-              </div>
-              <span className="text-lg font-bold tracking-wider">QUARK 3D</span>
+              <img src="./horizontal-transparente.png" className="h-20" alt="" />
             </div>
             <p className="text-sm leading-relaxed text-zinc-500">
               Transformando modelos digitais em produtos físicos tridimensionais de alta precisão. 
@@ -114,16 +111,16 @@ export const Footer: React.FC<FooterProps> = ({ setActiveCategory, navigateToCat
                   <svg className="h-4 w-4 fill-emerald-500" viewBox="0 0 24 24">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.479 2.012 14.019.99 11.397.99c-5.446 0-9.877 4.37-9.881 9.8-.001 1.763.476 3.486 1.381 5.02L1.888 20.1l4.759-1.238c.023-.008.046-.017.069-.026z" />
                   </svg>
-                  WhatsApp: (11) 99999-9999
+                  WhatsApp: (12) 99755-9353
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contato@quark3d.com.br"
+                  href="mailto:[EMAIL_ADDRESS]"
                   className="flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Mail className="h-4 w-4 text-zinc-500" />
-                  contato@quark3d.com.br
+                  quarkimpressao3d@gmail.com
                 </a>
               </li>
               <li>

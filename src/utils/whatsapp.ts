@@ -4,7 +4,7 @@
 
 // Centralized contact number for Quark3D (e.g. +55 (11) 99999-9999)
 // The user can easily customize this variable.
-export const WHATSAPP_NUMBER = "5511999999999"; 
+export const WHATSAPP_NUMBER = "5512997559353"; 
 
 export interface WhatsAppMessageParams {
   productName: string;

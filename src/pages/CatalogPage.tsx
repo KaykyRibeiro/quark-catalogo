@@ -26,9 +26,13 @@ export const CatalogPage: React.FC<CatalogPageProps> = ({
     "Escritório",
     "Decoração",
     "Suportes",
+    "Vasos",
+    "Banheiro",
     "Casa",
     "Geek",
     "Ferramentas",
+    "Acessórios",
+    "Outros"
   ];
 
   // Filter products based on search query and selected category
@@ -64,13 +68,10 @@ export const CatalogPage: React.FC<CatalogPageProps> = ({
             <Sparkles className="h-3.5 w-3.5 text-indigo-400" />
             Catálogo Interativo 3D
           </div>
+          <div className="flex items-center justify-center">
+            <img src="./logomarca-transparente.png" className="h-50" alt="" />
+          </div>
           
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white">
-            Transformando Código <br />
-            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              em Realidade Tridimensional
-            </span>
-          </h1>
           
           <p className="mx-auto mt-6 max-w-2xl text-base text-zinc-400 leading-relaxed sm:text-lg">
             Navegue por nossa linha exclusiva de organizadores, itens geek, ferramentas e peças decorativas. 

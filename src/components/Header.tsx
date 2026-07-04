@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Search, Menu, X, Cpu, Phone } from "lucide-react";
+import { Search, Menu, X, Phone } from "lucide-react";
 import { WHATSAPP_NUMBER } from "../utils/whatsapp";
 
 interface HeaderProps {
@@ -60,11 +60,11 @@ export const Header: React.FC<HeaderProps> = ({
             className="flex cursor-pointer items-center gap-2 transition-transform duration-200 active:scale-95"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white shadow-md shadow-zinc-300">
-              <Cpu className="h-5 w-5 animate-pulse" />
+              <img src="./logo-transparente.png" alt="" />
             </div>
             <div>
               <span className="text-xl font-bold tracking-wider text-black">QUARK</span>
-              <span className="text-xs font-semibold tracking-widest text-zinc-400 block -mt-1">3D PRINTING</span>
+              <span className="text-xs font-semibold tracking-widest text-zinc-400 block -mt-1">Impressão 3D</span>
             </div>
           </div>
 
