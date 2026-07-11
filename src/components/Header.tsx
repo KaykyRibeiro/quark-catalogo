@@ -5,7 +5,6 @@ import { WHATSAPP_NUMBER } from "../utils/whatsapp";
 interface HeaderProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
-  activeCategory: string;
   setActiveCategory: (category: string) => void;
   currentRoute: string;
   navigateToCatalog: () => void;
@@ -14,7 +13,6 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   searchQuery,
   setSearchQuery,
-  activeCategory,
   setActiveCategory,
   currentRoute,
   navigateToCatalog,
@@ -28,25 +26,54 @@ export const Header: React.FC<HeaderProps> = ({
     }
   };
 
-  const handleCategoryClick = (category: string) => {
-    setActiveCategory(category);
+  // COORDENE OS TÓPICOS DA NAVBAR AQUI (Facilmente modificáveis)
+  const NAV_TOPICS = [
+    { label: "Catálogo", tag: "" },
+    { label: "Dia dos Pais", tag: "#DiaDosPais" },
+    { label: "Dia dos Professores", tag: "#DiaDosProfessores" },
+    { label: "Geek", tag: "#Geek" },
+  ];
+
+  const handleTopicClick = (topic: { label: string; tag: string }) => {
+    if (topic.tag === "") {
+      setSearchQuery("");
+      setActiveCategory("Todos");
+    } else {
+      setSearchQuery(topic.tag);
+      setActiveCategory("Todos");
+    }
     navigateToCatalog();
     setIsMobileMenuOpen(false);
   };
 
-  const categories = [
-    "Todos",
-    "Organização",
-    "Escritório",
-    "Decoração",
-    "Suportes",
-    "Casa",
-    "Geek",
-    "Ferramentas",
-  ];
+  const isTopicActive = (topic: { label: string; tag: string }) => {
+    if (currentRoute !== "catalog") return false;
+    if (topic.tag === "") {
+      return searchQuery === "";
+    }
+    const queryClean = searchQuery.toLowerCase().replace(/[\s#_-]/g, "");
+    const tagClean = topic.tag.toLowerCase().replace(/[\s#_-]/g, "");
+    return queryClean === tagClean;
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-100 bg-white/80 backdrop-blur-md transition-all duration-300">
+      {/* Top Banner for Special Topic */}
+      <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-2.5 text-center text-xs font-semibold tracking-wide shadow-sm relative overflow-hidden">
+        {/* Subtle decorative glow */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-25" />
+        <div className="relative flex items-center justify-center gap-2 cursor-pointer hover:underline"
+          onClick={() => {
+            setSearchQuery("#DiaDosPais");
+            navigateToCatalog();
+          }}
+        >
+          <span className="inline-block animate-bounce">🎁</span>
+          <span>Especial Dia dos Pais: Encontre presentes únicos impressos em 3D!</span>
+          <span className="rounded bg-white/20 px-2 py-0.5 text-2xs uppercase tracking-wider font-extrabold ml-1 hover:bg-white/30 transition-colors">Ver Coleção</span>
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between gap-4">
           
@@ -87,17 +114,17 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Navigation & CTA */}
           <div className="hidden items-center gap-6 lg:flex">
             <nav className="flex items-center gap-6">
-              {categories.slice(0, 5).map((cat) => (
+              {NAV_TOPICS.map((topic) => (
                 <button
-                  key={cat}
-                  onClick={() => handleCategoryClick(cat)}
+                  key={topic.label}
+                  onClick={() => handleTopicClick(topic)}
                   className={`text-sm font-medium transition-colors hover:text-black ${
-                    activeCategory === cat && currentRoute === "catalog"
+                    isTopicActive(topic)
                       ? "text-black underline underline-offset-8 decoration-2"
                       : "text-zinc-500"
                   }`}
                 >
-                  {cat === "Todos" ? "Catálogo" : cat}
+                  {topic.label}
                 </button>
               ))}
             </nav>
@@ -149,19 +176,19 @@ export const Header: React.FC<HeaderProps> = ({
       {isMobileMenuOpen && (
         <div className="border-t border-zinc-100 bg-white px-4 py-6 shadow-xl lg:hidden animate-in slide-in-from-top duration-200">
           <div className="space-y-4">
-            <div className="font-semibold text-xs tracking-wider text-zinc-400 uppercase">Categorias</div>
+            <div className="font-semibold text-xs tracking-wider text-zinc-400 uppercase">Tópicos do Momento</div>
             <div className="grid grid-cols-2 gap-2">
-              {categories.map((cat) => (
+              {NAV_TOPICS.map((topic) => (
                 <button
-                  key={cat}
-                  onClick={() => handleCategoryClick(cat)}
+                  key={topic.label}
+                  onClick={() => handleTopicClick(topic)}
                   className={`rounded-lg px-3 py-2 text-left text-sm font-medium transition-all ${
-                    activeCategory === cat && currentRoute === "catalog"
+                    isTopicActive(topic)
                       ? "bg-black text-white"
                       : "bg-zinc-50 text-zinc-600 hover:bg-zinc-100"
                   }`}
                 >
-                  {cat}
+                  {topic.label}
                 </button>
               ))}
             </div>

@@ -63,7 +63,6 @@ function App() {
       <Header
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
         currentRoute={route.name}
         navigateToCatalog={navigateToCatalog}
@@ -87,6 +86,7 @@ function App() {
             setActiveCategory={setActiveCategory}
             navigateToCatalog={navigateToCatalog}
             onViewDetails={onViewDetails}
+            setSearchQuery={setSearchQuery}
           />
         )}
       </main>

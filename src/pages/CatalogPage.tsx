@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { ProductCard } from "../components/ProductCard";
 import type { ProductData } from "../components/ProductCard";
 import { SlidersHorizontal, Trash2, Cpu, Sparkles } from "lucide-react";
@@ -23,30 +23,63 @@ export const CatalogPage: React.FC<CatalogPageProps> = ({
   const categories = [
     "Todos",
     "Organização",
+    "Ferramentas",
     "Escritório",
     "Decoração",
     "Suportes",
-    "Vasos",
     "Banheiro",
-    "Casa",
     "Geek",
-    "Ferramentas",
-    "Acessórios",
+    "Chaveiros",
+    "Religiosos",
     "Outros"
   ];
 
-  // Filter products based on search query and selected category
-  const filteredProducts = products.filter((product) => {
-    const matchesSearch = product.name
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase()) || 
-      product.description.toLowerCase().includes(searchQuery.toLowerCase());
-      
-    const matchesCategory =
-      activeCategory === "Todos" || product.category === activeCategory;
+  // Shuffle products array once when the products list or component mounts
+  const shuffledProducts = useMemo(() => {
+    const arr = [...products];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, [products]);
 
-    return matchesSearch && matchesCategory;
-  });
+  // Filter products based on search query and selected category
+  const filteredProducts = useMemo(() => {
+    const queryClean = searchQuery.toLowerCase().replace(/[\s#_-]/g, "");
+    return shuffledProducts.filter((product) => {
+      const matchesSearch = product.name
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase()) || 
+        product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (product.tags && product.tags.some(tag => {
+          const tagClean = tag.toLowerCase().replace(/[\s#_-]/g, "");
+          return tagClean.includes(queryClean);
+        }));
+        
+      const matchesCategory =
+        activeCategory === "Todos" || product.category === activeCategory;
+
+      return matchesSearch && matchesCategory;
+    });
+  }, [shuffledProducts, searchQuery, activeCategory]);
+
+  const INITIAL_LIMIT = 8;
+  const INCREMENT_LIMIT = 8;
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LIMIT);
+
+  // Reset visible count when search query or category changes
+  useEffect(() => {
+    setVisibleCount(INITIAL_LIMIT);
+  }, [searchQuery, activeCategory]);
+
+  const displayedProducts = useMemo(() => {
+    return filteredProducts.slice(0, visibleCount);
+  }, [filteredProducts, visibleCount]);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + INCREMENT_LIMIT);
+  };
 
   const clearFilters = () => {
     setSearchQuery("");
@@ -122,6 +155,10 @@ export const CatalogPage: React.FC<CatalogPageProps> = ({
         <div className="mt-8 flex items-center justify-between text-sm text-zinc-500">
           <p>
             Mostrando{" "}
+            <span className="font-semibold text-black">
+              {Math.min(visibleCount, filteredProducts.length)}
+            </span>{" "}
+            de{" "}
             <span className="font-semibold text-black">{filteredProducts.length}</span>{" "}
             {filteredProducts.length === 1 ? "produto encontrado" : "produtos encontrados"}
             {activeCategory !== "Todos" && (
@@ -141,15 +178,31 @@ export const CatalogPage: React.FC<CatalogPageProps> = ({
 
         {/* Product Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {filteredProducts.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                onViewDetails={onViewDetails}
-              />
-            ))}
-          </div>
+          <>
+            <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+              {displayedProducts.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  onViewDetails={onViewDetails}
+                  setSearchQuery={setSearchQuery}
+                  navigateToCatalog={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                />
+              ))}
+            </div>
+            {filteredProducts.length > visibleCount && (
+              <div className="mt-12 flex justify-center animate-fade-in">
+                <button
+                  onClick={handleLoadMore}
+                  className="rounded-full bg-zinc-950 px-8 py-3 text-sm font-semibold text-white shadow-md shadow-zinc-300 hover:bg-zinc-800 transition-all duration-250 hover:shadow-lg active:scale-95 cursor-pointer"
+                >
+                  Carregar Mais
+                </button>
+              </div>
+            )}
+          </>
         ) : (
           /* Empty State */
           <div className="my-16 flex flex-col items-center justify-center text-center">

@@ -21,6 +21,7 @@ interface ProductDetailPageProps {
   setActiveCategory: (category: string) => void;
   navigateToCatalog: () => void;
   onViewDetails: (id: string) => void;
+  setSearchQuery: (query: string) => void;
 }
 
 export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
@@ -29,6 +30,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   setActiveCategory,
   navigateToCatalog,
   onViewDetails,
+  setSearchQuery,
 }) => {
   const product = products.find((p) => p.id === productId);
 
@@ -216,9 +218,23 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             
             {/* Header info */}
             <div>
-              <span className="inline-block rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-700">
-                {product.category}
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-block rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-700">
+                  {product.category}
+                </span>
+                {product.tags && product.tags.map((tag) => (
+                  <button
+                    key={tag}
+                    onClick={() => {
+                      setSearchQuery(tag);
+                      navigateToCatalog();
+                    }}
+                    className="inline-block rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold text-indigo-600 hover:bg-indigo-100 transition-colors cursor-pointer"
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
               <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl">
                 {product.name}
               </h1>
@@ -365,6 +381,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 key={p.id}
                 product={p}
                 onViewDetails={onViewDetails}
+                setSearchQuery={setSearchQuery}
+                navigateToCatalog={navigateToCatalog}
               />
             ))}
           </div>

@@ -2,7 +2,7 @@
   {
     "id": "suporte-escova-pasta-dentes",
     "name": "Suporte para Escova de Dentes e Pasta de Dente",
-    "description": "Um suporte para escova de dentes e pasta de dente com design moderno e linhas minimalistas. Seu acabamento texturizado e formato ergonômico criam um jogo sutil de luz e sombra, tornando-o uma peça de destaque em qualquer ambiente contemporâneo. Ideal para escovas de dentes e pastas de dente ou simplesmente como escultura autônoma.",
+    "description": "Um suporte para escova de dentes e pasta de dente com design moderno e linhas minimalistas. Seu acabamento texturizado e formato ergonômico criam um jogo sutil, tornando-o uma peça de destaque em qualquer ambiente contemporâneo. Ideal para escovas de dentes e pastas de dente ou simplesmente como escultura autônoma.",
     "category": "Banheiro",
     "price": 20.00,
     "images": [
@@ -13,8 +13,231 @@
       { "name": "Branco", "hex": "#EAE6DF", "image": "src/assets/products/suporte-escova-pasta-dentes/suporte-branco.webp" },
       { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/suporte-escova-pasta-dentes/suporte-preto.webp" }
     ],
-    "dimensions": "14 x 14 x 24 cm",
+    "dimensions": "18 x 10 x 5.5 cm",
     "material": "PETG Rígido de Alta Tenacidade",
-    "notes": "Produto não hermético. Não recomendado para conter líquidos diretamente."
+    "notes": "Produto não hermético. Não recomendado para conter líquidos diretamente.",
+    "tags": ["#Banheiro", "#Organização", "#Praticidade"]
+  },
+  {
+    "id": "organizador-mesa-texturizado-madeira",
+    "name": "Organizador de Mesa Texturizado Madeira",
+    "description": "Um organizador de mesa com design moderno e linhas minimalistas. Seu acabamento texturizado e formato ergonômico criam um jogo sutil, tornando-o uma peça de destaque em qualquer ambiente contemporâneo. Ideal para organizar canetas, lápis, tesouras, réguas, clipes e outros materiais de escritório.",
+    "category": "Organização",
+    "price": 19.90,
+    "images": [
+      "src/assets/products/organizador-mesa-texturizado-madeira/organizador-preto.webp",
+      "src/assets/products/organizador-mesa-texturizado-madeira/organizador-branco.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/organizador-mesa-texturizado-madeira/organizador-preto.webp" },
+      { "name": "Branco", "hex": "#EAE6DF", "image": "src/assets/products/organizador-mesa-texturizado-madeira/organizador-branco.webp" }
+    ],
+    "dimensions": "18 x 8 x 9.5 cm",
+    "material": "PETG Rígido de Alta Tenacidade",
+    "notes": "Produto não hermético. Não recomendado para conter líquidos diretamente.",
+    "tags": ["#Organização", "#Escritório", "#Produtividade"]
+  },
+  {
+    "id": "lixeira-multi-estilo-boca",
+    "name": "Lixeira Estilo Multi Boca",
+    "description": "Uma lixeira com design moderno e linhas minimalistas. Seu acabamento texturizado e formato ergonômico criam um jogo sutil, tornando-a uma peça de destaque em qualquer ambiente contemporâneo. Ideal para lixo de escritório ou uso geral.",
+    "category": "Organização",
+    "price": 25.90,
+    "images": [
+      "src/assets/products/lixeira-multi-boca/lixeira_preta_premium.webp",
+      "src/assets/products/lixeira-multi-boca/lixeira_preta_aberta.webp",
+      "src/assets/products/lixeira-multi-boca/lixeira_branca_premium.webp",
+      "src/assets/products/lixeira-multi-boca/lixeira_branca_aberta.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/lixeira-multi-boca/lixeira_preta_premium.webp" },
+      { "name": "Branco", "hex": "#EAE6DF", "image": "src/assets/products/lixeira-multi-boca/lixeira_branca_premium.webp" }
+    ],
+    "dimensions": "12.5 x 12.5 x 15 cm",
+    "material": "PETG Rígido de Alta Tenacidade",
+    "notes": "Produto não hermético. Não recomendado para conter líquidos diretamente.",
+    "tags": ["#Organização", "#Design", "#Limpeza"]
+  },
+  {
+    "id": "chaveiro-cruz-coracao",
+    "name": "Chaveiro Cruz com Coração",
+    "description": "Um chaveiro com design moderno e linhas minimalistas. O design combina uma cruz com um coração, criando uma peça única e versátil. Ideal para quem busca um acessório que combine fé e estilo.",
+    "category": "Religiosos",
+    "price": 7.50,
+    "images": [
+      "src/assets/products/chaveiro-cruz-coracao/chaveiros.webp",
+      "src/assets/products/chaveiro-cruz-coracao/chaveiro-preto.webp",
+      "src/assets/products/chaveiro-cruz-coracao/chaveiro-branco.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/chaveiro-cruz-coracao/chaveiro-preto.webp" },
+      { "name": "Branco", "hex": "#EAE6DF", "image": "src/assets/products/chaveiro-cruz-coracao/chaveiro-branco.webp" }
+    ],
+    "dimensions": "4.5 x 6.5 x 0.5 cm",
+    "material": "PLA Premium",
+    "notes": "Produto não hermético. Não recomendado para conter líquidos diretamente.",
+    "tags": ["#Chaveiros", "#Religioso"]
+  },
+  {
+    "id": "estatueta-virgem-maria-colorida",
+    "name": "Estatueta Virgem Maria (Madona) Colorida",
+    "description": "Esta estatueta estilizada da Virgem Maria (Madona) apresenta uma pose de oração pacífica com as mãos postas e detalhes faciais suaves e delicados. O design suave e fluido confere à figura uma presença calma e espiritual.",
+    "category": "Religiosos",
+    "price": 35.90,
+    "images": [
+      "src/assets/products/estatueta-virgem-maria/estatueta.webp"
+    ],
+    "colors": [
+      { "name": "Colorido", "hex": "#ffffff", "image": "src/assets/products/estatueta-virgem-maria/estatueta.webp" }
+    ],
+    "dimensions": "3.9 x 3.4 x 6 cm",
+    "material": "PLA Premium",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#Religioso", "#Decoração", "#Arte"]
+  },
+  {
+    "id": "estatueta-nossa-senhora-aparecida-preta",
+    "name": "Estatueta Nossa Senhora Aparecida na Caixa",
+    "description": "Esta estatueta estilizada da Nossa Senhora Aparecida apresenta uma pose de oração pacífica com as mãos postas. O design suave e fluido confere à figura uma presença calma e espiritual.",
+    "category": "Religiosos",
+    "price": 40.00,
+    "images": [
+      "src/assets/products/estatueta-nossa-senhora-aparecida/nossa-senhora-preta.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/estatueta-nossa-senhora-aparecida/nossa-senhora-preta.webp" }
+    ],
+    "dimensions": "10 x 6.7 x 20 cm",
+    "material": "PLA Premium",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#Religioso", "#Decoração", "#Premium"]
+  },
+  {
+    "id": "divino-espirito-santo",
+    "name": "Divino Espírito Santo",
+    "description": "O Divino Espírito Santo é uma representação da pomba que simboliza o Espírito Santo, a terceira pessoa da Santíssima Trindade no cristianismo. É um símbolo de paz, amor e renovação.",
+    "category": "Religiosos",
+    "price": 20.00,
+    "images": [
+      "src/assets/products/divino-espirito-santo/branco.webp",
+      "src/assets/products/divino-espirito-santo/branco-dourado.webp"
+    ],
+    "colors": [
+      { "name": "Branco", "hex": "#ffffff", "image": "src/assets/products/divino-espirito-santo/branco.webp" },
+      { "name": "Branco Dourado", "hex": "#d4af37", "image": "src/assets/products/divino-espirito-santo/branco-dourado.webp" }
+    ],
+    "dimensions": "7.4 x 0.5 x 8 cm",
+    "material": "PLA Premium",
+    "notes": "Produto não hermético. Não recomendado para conter líquidos diretamente.",
+    "tags": ["#Religioso", "#Decoração", "#Paz"]
+  },
+  {
+    "id": "chaveiro-nossa-senhora-aparecida",
+    "name": "Chaveiro Nossa Senhora Aparecida",
+    "description": "Um chaveiro com design moderno e linhas minimalistas.",
+    "category": "Religiosos",
+    "price": 7.50,
+    "images": [
+      "src/assets/products/chaveiro-nossa-senhora-aparecida/chaveiro-branco.webp"
+    ],
+    "colors": [
+      { "name": "Branco", "hex": "#EAE6DF", "image": "src/assets/products/chaveiro-nossa-senhora-aparecida/chaveiro-branco.webp" }
+    ],
+    "dimensions": "3.7 x 2.3 x 6 cm",
+    "material": "PLA Premium",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#Chaveiros", "#Religioso", "#Proteção"]
+  },
+  {
+    "id": "chaveiro-pai",
+    "name": "Chaveiro Pai",
+    "description": "Um chaveiro exclusivo feito sob medida para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Chaveiros",
+    "price": 19.90,
+    "images": [
+      "src/assets/products/chaveiro-pai-do-ano/chaveiro-pai.png"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/chaveiro-pai-do-ano/chaveiro-pai.png" }
+    ],
+    "dimensions": "5.0 x 3.0 x 0.6 cm",
+    "material": "PLA Premium Rígido",
+    "notes": "Inclui argola de metal para fixação rápida.",
+    "tags": ["#DiaDosPais", "#Chaveiros", "#Presente", "#EdicaoLimitada"]
+  },
+  {
+    "id":"chaveiro-te-amo-pai",
+    "name": "Chaveiro Te amo Pai",
+    "description": "Um chaveiro exclusivo feito sob medida para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Chaveiros",
+    "price": 24.90,
+    "images": [
+      "src/assets/products/chaveiro-te-amo-pai/chaveiro-te-amo-pai.webp",
+      "src/assets/products/chaveiro-te-amo-pai/chaveiro-te-amo-pai-com-chave.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/chaveiro-te-amo-pai/chaveiro-te-amo-pai.webp" }
+    ],
+    "dimensions": "5.0 x 3.0 x 0.6 cm",
+    "material": "PLA Premium Rígido",
+    "notes": "Inclui argola de metal para fixação rápida.",
+    "tags": ["#DiaDosPais", "#Chaveiros", "#Presente", "#EdicaoLimitada"]
+  },
+  {
+    "id":"pai-e-filho-pescando",
+    "name":"Pai e Filho Pescando - Quadro de Parede",
+    "description": "Um quadro artesanal para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Decoração",
+    "price": 40.00,
+    "images": [
+      "src/assets/products/pai-e-filho-pescando/pai-e-filho-pescando.webp",
+      "src/assets/products/pai-e-filho-pescando/pai-e-filho-pescando-branco.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/pai-e-filho-pescando/pai-e-filho-pescando.webp" },
+      { "name": "Branco", "hex": "#ffffff", "image": "src/assets/products/pai-e-filho-pescando/pai-e-filho-pescando-branco.webp" }
+    ],
+    "dimensions": "22.8 x 2.8 x 10 cm",
+    "material": "PLA Premium Rígido",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#DiaDosPais", "#Decoração", "#Presente", "#EdicaoLimitada"]
+  },
+  {
+    "id": "porta-retrato-papai",
+    "name": "Porta-retrato Papai",
+    "description": "Um porta-retrato artesanal para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Decoração",
+    "price": 9.90,
+    "images": [
+      "src/assets/products/porta-retrato-papai/porta-retrato-papai-preto.webp",
+      "src/assets/products/porta-retrato-papai/porta-retrato-papai-branco.webp"
+    ],
+    "colors": [
+      { "name": "Branco", "hex": "#ffffff", "image": "src/assets/products/porta-retrato-papai/porta-retrato-papai-branco.webp" },
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/porta-retrato-papai/porta-retrato-papai-preto.webp" }
+    ],
+    "dimensions": "14.6 x 2 x 5.2 cm",
+    "material": "PLA Premium Rígido",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#DiaDosPais", "#Decoração", "#Presente", "#EdicaoLimitada"]
+  },
+  {
+    "id": "pai-e-filho-caminhando",
+    "name": "Pai e filho caminhando - Miniatura",
+    "description": "Uma miniatura artesanal para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Decoração",
+    "price": 20.00,
+    "images": [
+      "src/assets/products/pai-e-filho-caminhando/pai-e-filho-caminhando-preto.webp",
+      "src/assets/products/pai-e-filho-caminhando/pai-e-filho-caminhando-branco.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/pai-e-filho-caminhando/pai-e-filho-caminhando-preto.webp" },
+      { "name": "Branco", "hex": "#ffffff", "image": "src/assets/products/pai-e-filho-caminhando/pai-e-filho-caminhando-branco.webp" }
+    ],
+    "dimensions": "7.8 x 0.2 x 12 cm",
+    "material": "PLA Premium Rígido",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#DiaDosPais", "#Decoração", "#Presente", "#EdicaoLimitada"]
   }
 ]

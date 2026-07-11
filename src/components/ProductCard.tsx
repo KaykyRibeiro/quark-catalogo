@@ -13,14 +13,22 @@ export interface ProductData {
   dimensions: string;
   material: string;
   notes: string;
+  tags?: string[];
 }
 
 interface ProductCardProps {
   product: ProductData;
   onViewDetails: (id: string) => void;
+  setSearchQuery?: (query: string) => void;
+  navigateToCatalog?: () => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({
+  product,
+  onViewDetails,
+  setSearchQuery,
+  navigateToCatalog,
+}) => {
   return (
     <div
       onClick={() => onViewDetails(product.id)}
@@ -58,6 +66,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails
           <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-zinc-500">
             {product.description}
           </p>
+
+          {/* Product Tags */}
+          {product.tags && product.tags.length > 0 && (
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {product.tags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (setSearchQuery) setSearchQuery(tag);
+                    if (navigateToCatalog) navigateToCatalog();
+                  }}
+                  className="rounded-full bg-indigo-50 px-2 py-0.5 text-2xs font-semibold text-indigo-600 hover:bg-indigo-100 hover:text-indigo-700 transition-all duration-150 cursor-pointer"
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Action / Price Area */}
