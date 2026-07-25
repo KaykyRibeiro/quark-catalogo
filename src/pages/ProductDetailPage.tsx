@@ -239,16 +239,46 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 {product.name}
               </h1>
               
-              <div className="mt-3 flex items-center justify-between border-b border-zinc-100 pb-5">
-                <div>
-                  <span className="text-xs text-zinc-400 block font-medium">Orçamento estimado</span>
-                  <span className="text-2xl font-black text-zinc-950">
-                    {product.price ? `R$ ${product.price.toFixed(2)}` : "Sob Consulta"}
-                  </span>
-                </div>
-                <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-100">
-                  Pronto para Encomenda
-                </span>
+              <div className="mt-5 border-b border-zinc-100 pb-5">
+                {product.priceAtacado && product.minQtyAtacado ? (
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="rounded-2xl border border-zinc-100 bg-zinc-50/30 p-4">
+                      <span className="text-xs font-bold tracking-wide text-zinc-400 uppercase">Preço Varejo</span>
+                      <div className="mt-1 flex items-baseline gap-1">
+                        <span className="text-2xl font-black text-zinc-950">
+                          {product.price ? `R$ ${product.price.toFixed(2)}` : "Sob Consulta"}
+                        </span>
+                        <span className="text-xs text-zinc-500 font-medium">/un</span>
+                      </div>
+                    </div>
+                    <div className="rounded-2xl border border-indigo-100 bg-indigo-50/20 p-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold tracking-wide text-indigo-500 uppercase">Preço Atacado</span>
+                        <span className="inline-flex items-center rounded-full bg-indigo-100 px-2 py-0.5 text-3xs font-extrabold text-indigo-700 uppercase">
+                          Mín. {product.minQtyAtacado} un
+                        </span>
+                      </div>
+                      <div className="mt-1 flex items-baseline gap-1">
+                        <span className="text-2xl font-black text-indigo-600">
+                          R$ {product.priceAtacado.toFixed(2)}
+                        </span>
+                        <span className="text-xs text-indigo-500 font-medium">/un</span>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-xs text-zinc-400 block font-medium">Orçamento estimado</span>
+                      <span className="text-2xl font-black text-zinc-950">
+                        {product.price ? `R$ ${product.price.toFixed(2)}` : "Sob Consulta"}
+                      </span>
+                    </div>
+                    <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-100">
+                      Pronto para Encomenda
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -339,18 +369,59 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             </div>
 
             {/* Main Order CTA Button */}
-            <div className="mt-8">
+            <div className="mt-8 space-y-4">
               <a
                 href={whatsAppLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full items-center justify-center gap-3 rounded-2xl bg-emerald-500 py-4 text-center font-bold text-white shadow-lg shadow-emerald-100 transition-all hover:bg-emerald-600 hover:shadow-xl hover:shadow-emerald-200 hover:-translate-y-0.5 active:translate-y-0 text-base"
+                className="flex w-full items-center justify-center gap-3 rounded-2xl bg-emerald-500 py-4 text-center font-bold text-white shadow-lg shadow-emerald-100/50 transition-all hover:bg-emerald-600 hover:shadow-xl hover:shadow-emerald-200 hover:-translate-y-0.5 active:translate-y-0 text-base"
               >
                 <MessageSquare className="h-5 w-5 fill-white text-emerald-500" />
                 Solicitar pelo WhatsApp
               </a>
+
+              {(product.shopeeUrl || product.mercadoLivreUrl) && (
+                <div className="pt-2">
+                  <div className="relative flex py-2 items-center">
+                    <div className="flex-grow border-t border-zinc-200"></div>
+                    <span className="flex-shrink mx-4 text-2xs font-bold text-zinc-400 uppercase tracking-wider">Ou compre diretamente</span>
+                    <div className="flex-grow border-t border-zinc-200"></div>
+                  </div>
+                  
+                  <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {product.shopeeUrl && (
+                      <a
+                        href={product.shopeeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2.5 rounded-2xl bg-[#EE4D2D] py-3.5 text-center font-bold text-white shadow-md shadow-orange-100 transition-all hover:bg-[#F4511E] hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 text-sm"
+                      >
+                        <svg className="h-5 w-5 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12z"/>
+                        </svg>
+                        Comprar na Shopee
+                      </a>
+                    )}
+                    
+                    {product.mercadoLivreUrl && (
+                      <a
+                        href={product.mercadoLivreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2.5 rounded-2xl bg-[#FFE600] py-3.5 text-center font-bold text-[#2D3277] shadow-md shadow-yellow-100/50 transition-all hover:bg-[#FFEB3B] hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 text-sm border border-[#FFE600]"
+                      >
+                        <svg className="h-5 w-5 fill-current text-[#2D3277]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12z"/>
+                        </svg>
+                        Comprar no Mercado Livre
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
+              
               <p className="mt-3 text-center text-xs text-zinc-400">
-                Ao clicar, você iniciará uma conversa com as especificações do produto pré-selecionadas.
+                Ao clicar no WhatsApp, você iniciará uma conversa com as especificações do produto pré-selecionadas.
               </p>
             </div>
 

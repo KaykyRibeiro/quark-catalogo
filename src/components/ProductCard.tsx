@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+//import { ArrowUpRight } from "lucide-react";
 import { getProductImageUrl } from "../utils/imageHelper";
 
 export interface ProductData {
@@ -8,6 +8,10 @@ export interface ProductData {
   description: string;
   category: string;
   price?: number;
+  priceAtacado?: number;
+  minQtyAtacado?: number;
+  shopeeUrl?: string;
+  mercadoLivreUrl?: string;
   images: string[];
   colors: { name: string; hex: string; image?: string }[];
   dimensions: string;
@@ -26,8 +30,8 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({
   product,
   onViewDetails,
-  setSearchQuery,
-  navigateToCatalog,
+  //setSearchQuery,
+  //navigateToCatalog,
 }) => {
   return (
     <div
@@ -68,7 +72,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </p>
 
           {/* Product Tags */}
-          {product.tags && product.tags.length > 0 && (
+          {/*product.tags && product.tags.length > 0 && (
             <div className="mt-3 flex flex-wrap gap-1.5">
               {product.tags.map((tag) => (
                 <button
@@ -84,18 +88,40 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 </button>
               ))}
             </div>
-          )}
+          )*/}
         </div>
 
         {/* Action / Price Area */}
-        <div className="mt-6 flex items-center justify-between border-t border-zinc-50 pt-4">
-          <div>
-            <span className="text-xs text-zinc-400 block font-medium">Orçamento estimado</span>
-            <span className="text-base font-bold text-zinc-950">
-              {product.price ? `R$ ${product.price.toFixed(2)}` : "Sob Consulta"}
-            </span>
+        <div className="mt-6 flex items-end justify-between border-t border-zinc-50 pt-4">
+          <div className="space-y-1">
+            {product.priceAtacado && product.minQtyAtacado ? (
+              <>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-2xs font-semibold uppercase tracking-wider text-zinc-400">Varejo:</span>
+                  <span className="text-lg font-bold text-green-600">
+                    R$ {product.price ? product.price.toFixed(2) : "0.00"}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-indigo-50/50 px-1 py-0.5 rounded-lg border border-indigo-100/50">
+                  <span className="text-sm font-bold uppercase tracking-wider text-indigo-500">Atacado:</span>
+                  <span className="text-sm font-bold text-indigo-600">
+                    R$ {product.priceAtacado.toFixed(2)}
+                  </span>
+                  <span className="text-sm text-indigo-400">
+                    (mín. {product.minQtyAtacado} un)
+                  </span>
+                </div>
+              </>
+            ) : (
+              <>
+                <span className="text-xs text-zinc-400 block font-medium">Orçamento estimado</span>
+                <span className="text-base font-bold text-zinc-950">
+                  {product.price ? `R$ ${product.price.toFixed(2)}` : "Sob Consulta"}
+                </span>
+              </>
+            )}
           </div>
-          
+          {/*
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -105,6 +131,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           >
             <ArrowUpRight className="h-5 w-5" />
           </button>
+          */}
         </div>
       </div>
     </div>

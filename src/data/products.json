@@ -5,6 +5,10 @@
     "description": "Um suporte para escova de dentes e pasta de dente com design moderno e linhas minimalistas. Seu acabamento texturizado e formato ergonômico criam um jogo sutil, tornando-o uma peça de destaque em qualquer ambiente contemporâneo. Ideal para escovas de dentes e pastas de dente ou simplesmente como escultura autônoma.",
     "category": "Banheiro",
     "price": 20.00,
+    "priceAtacado": 15.00,
+    "minQtyAtacado": 10,
+    "shopeeUrl": "https://shopee.com.br/product-placeholder-suporte",
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-suporte",
     "images": [
       "src/assets/products/suporte-escova-pasta-dentes/suporte-branco.webp",
       "src/assets/products/suporte-escova-pasta-dentes/suporte-preto.webp"
@@ -24,6 +28,9 @@
     "description": "Um organizador de mesa com design moderno e linhas minimalistas. Seu acabamento texturizado e formato ergonômico criam um jogo sutil, tornando-o uma peça de destaque em qualquer ambiente contemporâneo. Ideal para organizar canetas, lápis, tesouras, réguas, clipes e outros materiais de escritório.",
     "category": "Organização",
     "price": 19.90,
+    "priceAtacado": 14.90,
+    "minQtyAtacado": 10,
+    "shopeeUrl": "https://shopee.com.br/product-placeholder-organizador",
     "images": [
       "src/assets/products/organizador-mesa-texturizado-madeira/organizador-preto.webp",
       "src/assets/products/organizador-mesa-texturizado-madeira/organizador-branco.webp"
@@ -43,6 +50,9 @@
     "description": "Uma lixeira com design moderno e linhas minimalistas. Seu acabamento texturizado e formato ergonômico criam um jogo sutil, tornando-a uma peça de destaque em qualquer ambiente contemporâneo. Ideal para lixo de escritório ou uso geral.",
     "category": "Organização",
     "price": 25.90,
+    "priceAtacado": 19.90,
+    "minQtyAtacado": 5,
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-lixeira",
     "images": [
       "src/assets/products/lixeira-multi-boca/lixeira_preta_premium.webp",
       "src/assets/products/lixeira-multi-boca/lixeira_preta_aberta.webp",
@@ -64,6 +74,10 @@
     "description": "Um chaveiro com design moderno e linhas minimalistas. O design combina uma cruz com um coração, criando uma peça única e versátil. Ideal para quem busca um acessório que combine fé e estilo.",
     "category": "Religiosos",
     "price": 7.50,
+    "priceAtacado": 4.50,
+    "minQtyAtacado": 20,
+    "shopeeUrl": "https://shopee.com.br/product-placeholder-chaveiro-cruz",
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-chaveiro-cruz",
     "images": [
       "src/assets/products/chaveiro-cruz-coracao/chaveiros.webp",
       "src/assets/products/chaveiro-cruz-coracao/chaveiro-preto.webp",
@@ -84,6 +98,8 @@
     "description": "Esta estatueta estilizada da Virgem Maria (Madona) apresenta uma pose de oração pacífica com as mãos postas e detalhes faciais suaves e delicados. O design suave e fluido confere à figura uma presença calma e espiritual.",
     "category": "Religiosos",
     "price": 35.90,
+    "priceAtacado": 28.00,
+    "minQtyAtacado": 6,
     "images": [
       "src/assets/products/estatueta-virgem-maria/estatueta.webp"
     ],
@@ -101,6 +117,9 @@
     "description": "Esta estatueta estilizada da Nossa Senhora Aparecida apresenta uma pose de oração pacífica com as mãos postas. O design suave e fluido confere à figura uma presença calma e espiritual.",
     "category": "Religiosos",
     "price": 40.00,
+    "priceAtacado": 32.00,
+    "minQtyAtacado": 6,
+    "shopeeUrl": "https://shopee.com.br/product-placeholder-madona-caixa",
     "images": [
       "src/assets/products/estatueta-nossa-senhora-aparecida/nossa-senhora-preta.webp"
     ],
@@ -118,6 +137,9 @@
     "description": "O Divino Espírito Santo é uma representação da pomba que simboliza o Espírito Santo, a terceira pessoa da Santíssima Trindade no cristianismo. É um símbolo de paz, amor e renovação.",
     "category": "Religiosos",
     "price": 20.00,
+    "priceAtacado": 14.00,
+    "minQtyAtacado": 15,
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-divino",
     "images": [
       "src/assets/products/divino-espirito-santo/branco.webp",
       "src/assets/products/divino-espirito-santo/branco-dourado.webp"
@@ -137,6 +159,8 @@
     "description": "Um chaveiro com design moderno e linhas minimalistas.",
     "category": "Religiosos",
     "price": 7.50,
+    "priceAtacado": 4.50,
+    "minQtyAtacado": 20,
     "images": [
       "src/assets/products/chaveiro-nossa-senhora-aparecida/chaveiro-branco.webp"
     ],
@@ -149,28 +173,14 @@
     "tags": ["#Chaveiros", "#Religioso", "#Proteção"]
   },
   {
-    "id": "chaveiro-pai",
-    "name": "Chaveiro Pai",
-    "description": "Um chaveiro exclusivo feito sob medida para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
-    "category": "Chaveiros",
-    "price": 19.90,
-    "images": [
-      "src/assets/products/chaveiro-pai-do-ano/chaveiro-pai.png"
-    ],
-    "colors": [
-      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/chaveiro-pai-do-ano/chaveiro-pai.png" }
-    ],
-    "dimensions": "5.0 x 3.0 x 0.6 cm",
-    "material": "PLA Premium Rígido",
-    "notes": "Inclui argola de metal para fixação rápida.",
-    "tags": ["#DiaDosPais", "#Chaveiros", "#Presente", "#EdicaoLimitada"]
-  },
-  {
     "id":"chaveiro-te-amo-pai",
     "name": "Chaveiro Te amo Pai",
     "description": "Um chaveiro exclusivo feito sob medida para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
     "category": "Chaveiros",
-    "price": 24.90,
+    "price": 4.30,
+    "priceAtacado": 30.00,
+    "minQtyAtacado": 50,
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-chaveiro-te-amo-pai",
     "images": [
       "src/assets/products/chaveiro-te-amo-pai/chaveiro-te-amo-pai.webp",
       "src/assets/products/chaveiro-te-amo-pai/chaveiro-te-amo-pai-com-chave.webp"
@@ -178,7 +188,7 @@
     "colors": [
       { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/chaveiro-te-amo-pai/chaveiro-te-amo-pai.webp" }
     ],
-    "dimensions": "5.0 x 3.0 x 0.6 cm",
+    "dimensions": "2.8 x 2.1 x 0.3 cm",
     "material": "PLA Premium Rígido",
     "notes": "Inclui argola de metal para fixação rápida.",
     "tags": ["#DiaDosPais", "#Chaveiros", "#Presente", "#EdicaoLimitada"]
@@ -189,6 +199,10 @@
     "description": "Um quadro artesanal para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
     "category": "Decoração",
     "price": 40.00,
+    "priceAtacado": 30.00,
+    "minQtyAtacado": 8,
+    "shopeeUrl": "https://shopee.com.br/product-placeholder-quadro-pescando",
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-quadro-pescando",
     "images": [
       "src/assets/products/pai-e-filho-pescando/pai-e-filho-pescando.webp",
       "src/assets/products/pai-e-filho-pescando/pai-e-filho-pescando-branco.webp"
@@ -208,6 +222,8 @@
     "description": "Um porta-retrato artesanal para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
     "category": "Decoração",
     "price": 9.90,
+    "priceAtacado": 7.00,
+    "minQtyAtacado": 15,
     "images": [
       "src/assets/products/porta-retrato-papai/porta-retrato-papai-preto.webp",
       "src/assets/products/porta-retrato-papai/porta-retrato-papai-branco.webp"
@@ -227,6 +243,9 @@
     "description": "Uma miniatura artesanal para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
     "category": "Decoração",
     "price": 20.00,
+    "priceAtacado": 15.00,
+    "minQtyAtacado": 10,
+    "shopeeUrl": "https://shopee.com.br/product-placeholder-miniatura-caminhando",
     "images": [
       "src/assets/products/pai-e-filho-caminhando/pai-e-filho-caminhando-preto.webp",
       "src/assets/products/pai-e-filho-caminhando/pai-e-filho-caminhando-branco.webp"
@@ -239,5 +258,116 @@
     "material": "PLA Premium Rígido",
     "notes": "Peça artesanal, pode conter pequenas imperfeições.",
     "tags": ["#DiaDosPais", "#Decoração", "#Presente", "#EdicaoLimitada"]
+  },
+  {
+    "id": "chaveiro-feliz-dia-pais",
+    "name": "Chaveiro Feliz Dia dos Pais",
+    "description": "Um chaveiro artesanal para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Chaveiros",
+    "price": 5.45,
+    "priceAtacado": 50.00,
+    "minQtyAtacado": 12,
+    "shopeeUrl": "https://shopee.com.br/product-placeholder-chaveiro-feliz-dia-pais",
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-chaveiro-feliz-dia-pais",
+    "images": [
+      "src/assets/products/chaveiro-feliz-dia-pais/chaveiro-preto.webp",
+      "src/assets/products/chaveiro-feliz-dia-pais/chaveiro-branco.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/chaveiro-feliz-dia-pais/chaveiro-preto.webp" },
+      { "name": "Branco", "hex": "#ffffff", "image": "src/assets/products/chaveiro-feliz-dia-pais/chaveiro-branco.webp" }
+    ],
+    "dimensions": "5 x 6.8 x 0.3 cm",
+    "material": "PLA Premium",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#Chaveiros", "#DiaDosPais", "#Presente"]
+  },
+  {
+    "id": "estatua-minimalista-dia-pais",
+    "name": "Estátua minimalista para o Dia dos Pais",
+    "description": "Uma estátua minimalista para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Decoração",
+    "price": 40.00,
+    "priceAtacado": 30.00,
+    "minQtyAtacado": 8,
+    "shopeeUrl": "https://shopee.com.br/product-placeholder-estatua-minimalista",
+    "images": [
+      "src/assets/products/estatua-minimalista-dia-pais/estatua-minimalista-dia-pais-filho.webp",
+      "src/assets/products/estatua-minimalista-dia-pais/estatua-minimalista-dia-pais-filha.webp",
+      "src/assets/products/estatua-minimalista-dia-pais/estatua-minimalista-dia-pais-filho-e-filha.webp",
+      "src/assets/products/estatua-minimalista-dia-pais/estatua-minimalista-dia-pais-filho-e-duas-filhas.webp"
+    ],
+    "colors": [
+      { "name": "Filho", "hex": "#1A1A1A", "image": "src/assets/products/estatua-minimalista-dia-pais/estatua-minimalista-dia-pais-filho.webp" },
+      { "name": "Filha", "hex": "#1A1A1A", "image": "src/assets/products/estatua-minimalista-dia-pais/estatua-minimalista-dia-pais-filha.webp" },
+      { "name": "Filho e Filha", "hex": "#1A1A1A", "image": "src/assets/products/estatua-minimalista-dia-pais/estatua-minimalista-dia-pais-filho-e-filha.webp" },
+      { "name": "Filho e Duas Filhas", "hex": "#1A1A1A", "image": "src/assets/products/estatua-minimalista-dia-pais/estatua-minimalista-dia-pais-filho-e-duas-filhas.webp" }
+    ],
+    "dimensions": "12 x 2 x 12 cm",
+    "material": "PLA Premium Rígido",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#DiaDosPais", "#Decoração", "#Presente", "#EdicaoLimitada"]
+  },
+  {
+    "id": "chaveiro-te-amo-pai-doble-color",
+    "name": "Chaveiro Te amo Pai",
+    "description": "Um chaveiro exclusivo de duas cores para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Chaveiros",
+    "price": 2.40,
+    "priceAtacado": 50.00,
+    "minQtyAtacado": 23,
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-chaveiro-te-amo-pai",
+    "images": [
+      "src/assets/products/chaveiro-te-amo-pai-double-color/chaveiro-te-amo-pai-azul-branco.webp",
+      "src/assets/products/chaveiro-te-amo-pai-double-color/chaveiro-te-amo-pai-preto-branco.webp"
+    ],
+    "colors": [
+      { "name": "Azul e Branco", "hex": "#0000FF", "image": "src/assets/products/chaveiro-te-amo-pai-double-color/chaveiro-te-amo-pai-azul-branco.webp" },
+      { "name": "Preto e Branco", "hex": "#1A1A1A", "image": "src/assets/products/chaveiro-te-amo-pai-double-color/chaveiro-te-amo-pai-preto-branco.webp" }
+    ],
+    "dimensions": "5.3 x 4 x 0.6 cm",
+    "material": "PLA Premium",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#Chaveiros", "#DiaDosPais", "#Presente"]
+  },
+  {
+    "id": "chaveiro-te-amo-pai-bigode",
+    "name": "Chaveiro Te amo Pai Bigode",
+    "description": "Um chaveiro exclusivo para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Chaveiros",
+    "price": 3.24,
+    "priceAtacado": 51.80,
+    "minQtyAtacado": 17,
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-chaveiro-te-amo-pai",
+    "images": [
+      "src/assets/products/chaveiro-te-amo-pai-bigode/chaveiro-te-amo-pai-bigode.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/chaveiro-te-amo-pai-bigode/chaveiro-te-amo-pai-bigode.webp" }
+    ],
+    "dimensions": "5 x 6.5 x 0.2 cm",
+    "material": "PLA Premium",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#Chaveiros", "#DiaDosPais", "#Presente"]
+  },
+  {
+    "id": "chaveiro-feliz-dia-pais-bigode",
+    "name": "Chaveiro Feliz Dia dos Pais",
+    "description": "Um chaveiro exclusivo para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Chaveiros",
+    "price": 4.75,
+    "priceAtacado": 52.00,
+    "minQtyAtacado": 12,
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-chaveiro-te-amo-pai",
+    "images": [
+      "src/assets/products/chaveiro-feliz-dia-pais-bigode/chaveiro-feliz-dia-dos-pais-bigode.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/chaveiro-feliz-dia-pais-bigode/chaveiro-feliz-dia-pais-bigode.webp" }
+    ],
+    "dimensions": "5.4 x 6.1 x 0.6 cm",
+    "material": "PLA Premium",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#Chaveiros", "#DiaDosPais", "#Presente"]
   }
 ]
