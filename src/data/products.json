@@ -49,9 +49,9 @@
     "name": "Lixeira Estilo Multi Boca",
     "description": "Uma lixeira com design moderno e linhas minimalistas. Seu acabamento texturizado e formato ergonômico criam um jogo sutil, tornando-a uma peça de destaque em qualquer ambiente contemporâneo. Ideal para lixo de escritório ou uso geral.",
     "category": "Organização",
-    "price": 25.90,
-    "priceAtacado": 19.90,
-    "minQtyAtacado": 5,
+    "price": 70.00,
+    "priceAtacado": 0.00,
+    "minQtyAtacado": 0,
     "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-lixeira",
     "images": [
       "src/assets/products/lixeira-multi-boca/lixeira_preta_premium.webp",
@@ -158,9 +158,9 @@
     "name": "Chaveiro Nossa Senhora Aparecida",
     "description": "Um chaveiro com design moderno e linhas minimalistas.",
     "category": "Religiosos",
-    "price": 7.50,
-    "priceAtacado": 4.50,
-    "minQtyAtacado": 20,
+    "price": 1.30,
+    "priceAtacado": 25.00,
+    "minQtyAtacado": 24,
     "images": [
       "src/assets/products/chaveiro-nossa-senhora-aparecida/chaveiro-branco.webp"
     ],
@@ -177,8 +177,8 @@
     "name": "Chaveiro Te amo Pai",
     "description": "Um chaveiro exclusivo feito sob medida para comemorar o Dia dos Pais. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
     "category": "Chaveiros",
-    "price": 4.30,
-    "priceAtacado": 30.00,
+    "price": 0.70,
+    "priceAtacado": 22.00,
     "minQtyAtacado": 50,
     "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-chaveiro-te-amo-pai",
     "images": [
@@ -369,5 +369,51 @@
     "material": "PLA Premium",
     "notes": "Peça artesanal, pode conter pequenas imperfeições.",
     "tags": ["#Chaveiros", "#DiaDosPais", "#Presente"]
+  },
+  {
+    "id": "bracelete-batman",
+    "name": "Par de Braceletes Batman",
+    "description": "Um par de braceletes exclusivo para fãs de Batman. Com acabamento impecável em relevo e design robusto, é o presente perfeito para demonstrar o carinho pelo seu herói.",
+    "category": "Geek",
+    "price": 260.00,
+    "priceAtacado": 0.00,
+    "minQtyAtacado": 0,
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-chaveiro-te-amo-pai",
+    "shopeeUrl": "",
+    "images": [
+      "src/assets/products/bracelete-batman/bracelete-batman-pre-cinza.webp",
+      "src/assets/products/bracelete-batman/bracelete-batman-preto.webp"
+    ],
+    "colors": [
+      { "name": "Preto e Cinza", "hex": "#1A1A1A", "image": "src/assets/products/bracelete-batman/bracelete-batman-pre-cinza.webp" },
+      { "name": "Preto", "hex": "#000000", "image": "src/assets/products/bracelete-batman/bracelete-batman-preto.webp" }
+    ],
+    "dimensions": "5.4 x 6.1 x 0.6 cm",
+    "material": "PLA Premium",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#Batman", "#Braceletes", "#Geek", "#Presente", "#DC"]
+  }, 
+  {
+    "id": "suporte-headset-com-morsa",
+    "name": "Suporte para Headset com Morsa",
+    "description": "Suporte para headset com morsa para fixação em mesa ou bancada. Mesas de 3cm de espessura",
+    "category": "Suportes",
+    "price": 26.00,
+    "priceAtacado": 84.00,
+    "minQtyAtacado": 4,
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/placeholder-suporte-headset",
+    "shopeeUrl": "",
+    "images": [
+      "src/assets/products/suporte-headset-com-morsa/suporte-headset-com-morsa.webp",
+      "src/assets/products/suporte-headset-com-morsa/suporte-headset-com-morsa-mesa.webp",
+      "src/assets/products/suporte-headset-com-morsa/suporte-headset-com-morsa-senario.webp"
+    ],
+    "colors": [
+      { "name": "Preto", "hex": "#1A1A1A", "image": "src/assets/products/suporte-headset-com-morsa/suporte-headset-com-morsa.webp" }
+    ],
+    "dimensions": "9.7 x 7.1 x 11.3 cm",
+    "material": "PLA Premium",
+    "notes": "Peça artesanal, pode conter pequenas imperfeições.",
+    "tags": ["#Suporte", "#Headset", "#Acessórios", "#Presente", "#Geek"]
   }
 ]
